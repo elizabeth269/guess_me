@@ -6,7 +6,9 @@ fn main() {
     let random_number = rand::thread_rng().gen_range(1..=100);
     // println!("Random number is {}", random_number);
     println!("Welcome to the guessing game, enter a number from 1 to 100");
+    let mut count = 0;
     loop {
+        // let count = count + 1;
         //get user input
         let mut guess = String::new();
         io::stdin()
@@ -30,7 +32,10 @@ fn main() {
                 break;
             }
         }
+        count += 1;
     }
+
+    println!("you guessed: {count} times")
 }
 
 //get user input
