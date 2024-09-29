@@ -1,3 +1,4 @@
+use rand::Rng;
 use std::io;
 
 fn main() {
@@ -7,7 +8,11 @@ fn main() {
     io::stdin()
         .read_line(&mut guess)
         .expect("coudn't process your guess");
-    println!("you guessed: {}", guess)
+    println!("you guessed: {}", guess);
+
+    //generate random number
+    // let random_number = rand::thread_rng().gen_range(1..=100);
+    println!("Random number is {}", rand::thread_rng().gen_range(1..=100))
 }
 
 //get user input
